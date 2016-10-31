@@ -1,9 +1,9 @@
+import * as types from '../actions/actionTypes';
+
 export default function courseReducer(state = [], action) {
     const actionFunctions = {
-        'CREATE_COURSE': function() {
-            return[...state,
-                Object.assign({}, action.course)
-            ];
+        [types.LOAD_COURSES_SUCCESS]: function() {
+            return action.courses;
         },
         'default': function() {
             return state;
