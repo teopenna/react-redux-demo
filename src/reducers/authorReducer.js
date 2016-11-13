@@ -1,10 +1,10 @@
 import * as types from '../actions/actionTypes';
 import initialState from './initialState';
 
-export default function courseReducer(state = initialState.courses, action) {
+export default function authorReducer(state = initialState.authors, action) {
     const actionFunctions = {
-        [types.LOAD_COURSES_SUCCESS]: function() {
-            return action.courses;
+        [types.LOAD_AUTHORS_SUCCESS]: function() {
+            return action.authors;
         },
         'default': function() {
             return state;
